@@ -11,10 +11,12 @@
 TEST_CASE( "Assignment" ) {
     SECTION( "b1" ) {
         Binomial b;
+        
         REQUIRE( b.GetCoefficient(1) == 1.0 );
         REQUIRE( b.GetCoefficient(2) == 1.0 );
         REQUIRE( b.GetCoefficient(3) == -1.0 );
     }
+
     SECTION( "b2" ) {
         Binomial b;
         REQUIRE( b.GetPower(1) == 1 );
@@ -35,6 +37,7 @@ TEST_CASE( "Assignment" ) {
         REQUIRE( b.GetCoefficient(2) == 5.0 );
         REQUIRE( b.GetPower(2) == 1 );
     }
+
     SECTION( "b5" ) {
         Binomial b{2.0,2,5.0,4};
         REQUIRE( b.GetCoefficient(1) == 2.0 );
